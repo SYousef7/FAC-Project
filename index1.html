@@ -1,206 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pikachu - Wavefinding Project</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            padding-bottom: 100px; /* Add padding to prevent footer from covering content */
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            text-align: center;
-        }
-        h2 {
-            color: #4CAF50;
-            margin-top: 30px;
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 10px;
-        }
-        .intro {
-            margin-top: 20px;
-            font-size: 1.1em;
-            text-align: justify;
-            line-height: 1.6;
-        }
-        .section {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .team-member {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .team-member img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-right: 20px;
-            object-fit: cover;
-        }
-        .prototype-image {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .prototype-image img {
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        ul {
-            line-height: 1.6;
-            padding-left: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Pikachu - Wavefinding Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      padding-bottom: 100px;
+    }
+
+    header {
+        background-color: #2e7d32; 
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+
+    }
+
+    .header-content {
+        font-weight: 500;
+    }
+
+    .header-content img {
+      height: 100px; 
+      margin-left: -20px; 
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    h2 {
+        color: #2e7d32; 
+  margin-top: 30px;
+  border-bottom: 2px solid #2e7d32;
+  padding-bottom: 10px;
+
+    }
+
+    .intro {
+      margin-top: 20px;
+      font-size: 1.1em;
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    .section {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Key Features Flex Layout */
+    .section ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+
+    .section ul li {
+      flex: 1 1 45%;
+      margin-bottom: 10px;
+    }
+
+    .team-members {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+
+    .team-member {
+      text-align: center;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .team-member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 3px solid #4CAF50;
+    }
+
+    .draft-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .draft-image {
+      text-align: center;
+    }
+
+    .draft-image img {
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+
+    .prototype-section {
+      margin: 30px 0;
+    }
+
+    .prototype-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .prototype-image {
+      text-align: center;
+    }
+
+    .prototype-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+
+    .design-flow {
+      width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+      border-radius: 8px;
+      margin: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+      }
+      .draft-grid {
+        grid-template-columns: 1fr;
+      }
+      .prototype-images {
+        grid-template-columns: 1fr;
+      }
+      .prototype-image img {
+        height: 300px;
+      }
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .header-content {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
 
+
     <header>
-        <img src="images/Pikachu.jpg" alt="Pikachu logo" style="height: 80px;">
-        <h1>Pikachu</h1>
-        <p>Wavefinding Project for Blind and Visually Impaired People</p>
+        <div class="header-content">
+            <img src="images/Pikachu.jpg" alt="Pikachu logo" style="height: 80px;">
+            <div>
+                <h1>Team Pikachu Presents</h1>
+                <p>Wavefinding Project for Blind and Visually Impaired People</p>
+            </div>
+        </div>
     </header>
 
     <div class="container">
         <div class="section">
             <h2>About the Project</h2>
             <p class="intro">
-                Welcome to the Pikachu Wavefinding Project. We are developing an innovative navigation system to assist blind and visually impaired individuals in navigating public spaces. Our goal is to provide an intuitive, audio-based system that allows users to confidently and independently navigate their surroundings. 
-            </p>
-            <p class="intro">
-                The project is designed to enhance accessibility and independence for those with visual impairments by offering real-time guidance through voice commands and auditory cues. With this technology, users can navigate complex environments, such as parks, shopping malls, or public transportation systems, safely and efficiently.
+                Welcome to the Pikachu's Wavefinding Project. We are developing an innovative navigation system to assist blind and visually impaired individuals in navigating public spaces. Our goal is to provide an intuitive, audio-based system that allows users to confidently and independently navigate their surroundings.         
+                The project is designed to enhance accessibility and independence for those with visual impairments by offering real-time guidance through voice commands and auditory cues. With this technology, users can hope to navigate complex environments, such as museum, shopping malls, or public transportation systems, safely and efficiently.
             </p>
         </div>
 
         <div class="section">
             <h2>Key Features</h2>
             <ul>
-                <li>Real-time voice navigation with customizable voice options</li>
-                <li>Audio feedback for precise location and direction information</li>
-                <li>Haptic feedback integration for additional sensory input</li>
-                <li>Accessible interface designed specifically for visually impaired users</li>
-                <li>Adaptable for different environments (indoor/outdoor)</li>
-                <li>Obstacle detection and avoidance alerts</li>
-                <li>Landmark identification system</li>
+                <li>Voiceover friendly interface</li>
+                <li>Navigation to specific locations like the Lane Family Gallery</li>
+                <li>Lobby navigation assistance</li>
+                <li>One-tap employee assistance with help button</li>
+                <li>Fully accessible design</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>Project Draft</h2>
+            <h2>Design Process</h2>
             <p class="intro">
-                Our current draft includes the following components and milestones:
+                These were the drafts and foundation of our work:
             </p>
+            
+            <div class="draft-grid">
+                <div class="draft-image">
+                    <img src="images/1.jpg" alt="Affinity Diagram showing user research insights">
+                    <p>Affinity Diagram</p>
+                </div>
+                <div class="draft-image">
+                    <img src="images/S1.jpg" alt="First convergent sketch of interface ideas">
+                    <p>Convergent Sketch 1</p>
+                </div>
+                <div class="draft-image">
+                    <img src="images/S2.jpg" alt="Second convergent sketch of navigation flows">
+                    <p>Convergent Sketch 2</p>
+                </div>
+                <div class="draft-image">
+                    <img src="images/SB.jpg" alt="Storyboard showing user journey">
+                    <p>Storyboard</p>
+                </div>
+            </div>
+            
             <ul>
-                <img src="images/1.1.jpg" alt="Description of image">
-
-                <li><strong>Phase 1 (Completed):</strong> Market research and user needs assessment</li>
-                <li><strong>Phase 2 (In Progress):</strong> Prototype development with basic navigation features</li>
-                <li><strong>Phase 3 (Upcoming):</strong> Advanced obstacle detection implementation</li>
-                <li><strong>Phase 4 (Future):</strong> Integration with public transportation systems</li>
-                <li><strong>Phase 5 (Future):</strong> Large-scale testing and user feedback collection</li>
+                <li><strong>Research Phase:</strong> Created affinity diagram with ideas, challenges, and needs of blind or visually impaired users </li>
+                <li><strong> Design Phase:</strong> Developed convergent sketches of key ideas from the affinity diagram</li>
+                <li><strong>Prototyping:</strong> Created storyboard showing how the app would work in real scenarios</li>
             </ul>
-            <p class="intro">
-                We are currently refining our algorithms for more accurate positioning and developing more natural voice guidance systems. Future updates will include indoor navigation capabilities and integration with existing accessibility tools.
-            </p>
         </div>
 
         <div class="section">
             <h2>Our Team</h2>
             <p class="intro">
-                The Pikachu project is developed by 4 students:
+                The Pikachu project is developed by 4 Colorado College students:
             </p>
             
-            <div class="team-member">
-                <img src="images/sam.jpg" alt="picture of sam">
-                <div>
-                    <h3>Arez</h3>
-								<p>likes to box.</p>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="images/Arez.jpg" alt="Arez Khidr">
+                    <h3>Arez Khidr</h3>
+                    <p>Senior at Colorado College majoring in Computer Science and History</p>
                 </div>
-            </div>
-            
-            <div class="team-member">
-                <img src="images/sam.jpg" alt="picture of sam">
-                <div>
-                    <h3>Cornrolls Sam</h3>
-                    <p>likes dunking on foos.</p>
+                
+                <div class="team-member">
+                    <img src="images/Cisco.jpg" alt="Francisco Ortega">
+                    <h3>Francisco Ortega</h3>
+                    <p>Junior at Colorado College majoring in Computer Science major with Film Studies minor</p>
                 </div>
-            </div>
-            
-            <div class="team-member">
-                <img src="images/sam.jpg" alt="picture of sam">
-                <div>
-                    <h3>The CO</h3>
-                    <p>likes to beat the goons.</p>
+
+                <div class="team-member">
+                    <img src="images/sam.jpg" alt="Sam Lain">
+                    <h3>Sam Lain</h3>
+                    <p>Junior at Colorado College majoring in Computer Science and BESoc</p>
                 </div>
-            </div>
-            
-            <div class="team-member">
-                <img src="images/sam.jpg" alt="picture of sam">
-                <div>
-                    <h3>Yousef</h3>
-                    <p>Likes soccer.</p>
+                
+                <div class="team-member">
+                    <img src="images/yousef.JPG" alt="Yousef Sengal">
+                    <h3>Yousef Sengal</h3>
+                    <p>Junior at Colorado College majoring in Computer Science with Art Studio minor</p>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2>Prototype</h2>
-            <p class="intro">
-                Our current prototype consists of a wearable device paired with a smartphone application. The system uses a combination of GPS, Bluetooth beacons, and computer vision to determine the user's location and provide navigation instructions.
-            </p>
+            <h2>Prototype Development</h2>
             
-            <div class="prototype-image">
-                <img src="https://via.placeholder.com/600x400" alt="Pikachu Prototype">
-                <p>Current prototype version 1.2</p>
+            <div class="prototype-section">
+                <h3>Design Flow</h3>
+                <p class="intro">
+                    Our design process evolved from initial sketches to the final prototype:
+                </p>
+                <img src="images/AP.jpg" alt="Design flow from sketch to final product" class="design-flow">
             </div>
             
-            <h3>Prototype Features:</h3>
-            <ul>
-                <li>Wearable vibration feedback unit</li>
-                <li>Smartphone app with voice interface</li>
-                <li>Basic obstacle detection using ultrasonic sensors</li>
-                <li>Directional audio guidance system</li>
-                <li>Battery life of 8+ hours</li>
-            </ul>
-            
-            <p class="intro">
-                We are currently testing the prototype with visually impaired volunteers in controlled environments. Initial feedback has been positive, with users particularly appreciating the clear voice instructions and intuitive vibration patterns for directional cues.
-            </p>
+            <div class="prototype-section">
+                <h3>Final Design</h3>
+                <p class="intro">
+                    Our navigation app provides audio-guided assistance for visually impaired users to navigate indoor spaces with confidence. 
+                    When the app launches, a screen reader activates automatically and prompts the user to select a gallery. 
+                    After a gallery is chosen, the app delivers clear, step-by-step audio directions to guide the user to their destination, 
+                    while also alerting them to any obstacles along the way. The intuitive interface combines voice commands with simple gestures for 
+                    seamless wayfinding and easy access to important facilities. A help button is always available for immediate support whenever needed.
+
+
+                
+                <div class="prototype-images">
+                    <div class="prototype-image">
+                        <img src="images/Pro.1.jpg" alt="App home screen interface">
+                        <p>Home Screen</p>
+                    </div>
+                    <div class="prototype-image">
+                        <img src="images/Pro.2.jpg" alt="Gallery selection screen">
+                        <p>Gallery Selection</p>
+                    </div>
+                    <div class="prototype-image">
+                        <img src="images/Pro.3.jpg" alt="Route guidance interface">
+                        <p>Route Guidance</p>
+                    </div>
+                    <div class="prototype-image">
+                        <img src="images/Pro.4.jpg" alt="Lane Family gallery view">
+                        <p>Lane Family Gallery</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 Pikachu Nit Lakeshore | All Rights Reserved | Contact: info@pikachu-wavefinding.org</p>
+        <p>&copy; 2025 Pikachu | All Rights Reserved</p>
     </footer>
 
 </body>
