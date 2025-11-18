@@ -4,28 +4,28 @@ This project is a prototype wayfinding system designed to help blind and visuall
 
 The prototype focuses on:
 
-Accessible, VoiceOver-friendly navigation
+    -Accessible, VoiceOver-friendly navigation
 
-Audio guidance to galleries and indoor locations
+    -Audio guidance to galleries and indoor locations
 
-A help button for quick assistance
+    -A help button for quick assistance
 
-A clean, simple interface designed for low-vision users
+    -A clean, simple interface designed for low-vision users
 
 The webpage includes:
 
-An overview of the project
+    - An overview of the project
 
-Key features
+    - Key features
 
-Research diagrams and early sketches
+    - Research diagrams and early sketches
 
-The design process
+    - The design process
 
-Team information
+    - Team information
 
-Screens from the final Figma prototype
+    - Screens from the final Figma prototype
 
-This is not a full application—it's a design exploration showing how indoor navigation can be improved for people with visual impairments.
+* This is not a full application—it's a design exploration showing how indoor navigation can be improved for people with visual impairments.
 
 Live Prototype: https://wayfinder-henna.vercel.app/
