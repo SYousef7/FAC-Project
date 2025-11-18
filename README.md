@@ -1,5 +1,5 @@
-Pikachu Wayfinding Prototype
-
+**Pikachu Wayfinding Prototype
+**
 This project is a prototype wayfinding system designed to help blind and visually impaired people navigate indoor spaces more easily. It was created using Figma for the app design and then turned into a simple web page to showcase the research, sketches, and final prototype.
 
 The prototype focuses on:
